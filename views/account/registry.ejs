@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+    <link rel='stylesheet' href='/Css/index.css'>
+
+    <title>Register</title>
+</head>
+
+    <header>
+        <ul class='navbar'>
+            <li>        
+                <img src="/img/logoATN.jpg" />
+            </li>
+            
+            <li>        
+                <a class="navbar-brand" href="#">ATN SHOP By NTD</a>
+            </li>
+    
+            <li>
+                <a href='/'>Home</a>
+            </li>
+    
+        <li>
+            <a href='/products'>Product</a>
+        </li>
+
+        <li>
+            <a href='/login' class='active'>Account</a>
+        </li>
+
+        <li>
+            <a href='/cart'>My Cart</a>
+        </li>
+        </ul>
+    </header>
+    
+    <body>
+        <div id="login-card" class="card">
+            <div class="card-body">
+              <h2 class="text-center">Register form</h2>
+              <br>
+                <form action="register" method="POST" enctype="application/x-www-form-urlencoded">
+
+                Name:             
+                <div class="form-group">
+                    <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                </div>
+                Age: 
+                <div class="form-group">
+                    <input type="number" min="18" class="form-control" id="age" placeholder="Enter age" name="age">
+                </div>
+                Email: 
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                Password:
+                <div class="form-group">
+                    <input type="password" minlength="6" maxlength="16" class="form-control" id="password" placeholder="Enter password" name="password">
+                </div>
+                Gender:<br>
+                <input type="radio" id="gender" name="gender" value="male"> Male<br>
+                <input type="radio" id="gender" name="gender" value="female"> Female<br>
+                <br><br>
+    
+                <button type="submit" id="button" class="btn btn-primary deep-purple btn-block ">Submit</button>
+                <button type="reset" id="button" class="btn btn-primary deep-purple btn-block ">Reset</button>
+                </form>
+            </div>
+        </div>
+    </body>
+    
+    <footer>
+        <ul class='navbar'>
+            <img src="/img/logoATN.jpg" />
+            <a class="navbar-brand" href="#">(c) Copyright by NTD TCS20032</a>
+        </ul>
+    </footer>
+
+</html>

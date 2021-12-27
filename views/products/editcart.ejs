@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='/css/index.css'>
+    <link rel='stylesheet' href='/css/mycart.css'>
+
+    <title>Edit Cart</title>
+</head>
+
+<header>
+    <ul class='navbar'>
+        <li>
+            <img src="/img/logoATN.jpg" />
+        </li>
+
+        <li>
+            <a class="navbar-brand" href="#">ATN SHOP By NTD</a>
+        </li>
+
+        <li>
+            <a href='/'>Home</a>
+        </li>
+
+        <li>
+            <a href='/products'>Product</a>
+        </li>
+
+        <li>
+            <a href='/login'>Account</a>
+        </li>
+
+        <li>
+            <a href='/cart' class='active'>My Cart</a>
+        </li>
+    </ul>
+</header>
+
+<body>
+        <% list.rows.forEach(function(cart) { %>
+            <div id="login-card" class="card">
+                <div class="card-body">
+                  <h2 class="text-center">Update Cart form</h2>
+                  <br>
+                    <form action="/updatecart/<%= cart.id %>" method="PUT" enctype="application/x-www-form-urlencoded">
+                        
+                    ID:     
+                    <div class="form-group">
+                        <input type="id" style="text-align:center" class="form-control" id="id" placeholder="<%= cart.id %>" value="<%= cart.id %>" name="id" readonly>
+                    </div>
+                    Name:             
+                    <div class="form-group">
+                        <input type="name" style="text-align:center" class="form-control" id="name" placeholder="<%= cart.name %>" name="name" readonly>
+                    </div>
+                    Image:
+                    <div class="img-container" style="text-align:center;margin-top: 15px;margin-bottom: 15px">
+                        <img id="img1" src='<%= cart.img %>' />
+                    </div>
+                    Quantity: 
+                    <div class="form-group">
+                        <input type="quantity" min="1" style="text-align:center" class="form-control" id="quantity" placeholder="<%= cart.quantity %>" name="quantity">
+                    </div>
+                    <div class="but-container" style="margin-left: 4vw;">
+                        <button type="submit" style="width: 110px;" id="button" class="btn btn-primary deep-purple btn-block ">Update</button>
+                        <button type="reset" style="width: 110px;" id="button" class="btn btn-primary deep-purple btn-block ">Reset</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        <% }) %>
+</body>
+
+<footer>
+    <ul class='navbar'>
+        <img src="/img/logoATN.jpg" />
+        <a class="navbar-brand" href="#">(c) Copyright by NTD TCS20032</a>
+    </ul>
+</footer>
+
+</html>

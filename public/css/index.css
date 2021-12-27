@@ -1,0 +1,341 @@
+/*
+    Three ways to format HTML:
+        1. Inline Style.
+        2. Embedded Style Sheet.
+        3. External Style Sheet.
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-top: -80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: "Nunito";
+  background: linear-gradient(to bottom right, #f5fdcf, #FAFCFF);  margin-top: 10vh;
+  margin-bottom: 10vh;
+  height: 100vh;
+}
+
+footer {
+  margin-top: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  justify-content: center;
+  display: flex;
+	width: 70px;
+	height: 50px;
+	background-color: #242628;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	border-radius: 10px;
+  margin-left: 10px;
+}
+
+.search-box.open {
+	width: 420px;
+}
+
+.search-input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	box-shadow: none;
+	background: transparent;
+	color: #fff;
+	padding: 20px 100px 20px 35px;
+	font-size: 40px;
+}
+
+.search-btn {
+	color: #242628;
+	outline: none;
+	border: none;
+	width: 70px;
+	height: 50px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	font-size: 30px;
+  transition: 0.5s;
+}
+
+.search-btn:hover {
+  transform: scale(1.2);
+}
+
+.container:first-child {
+  margin-left: 0;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: black;
+  align-items: center;
+  align-content: center;
+  display: flow-root !important;
+  border-radius: 10px;
+}
+
+.navbar li {
+    margin-left: 0;
+  float: left;
+  border-right: 1px solid white;
+}
+
+/*
+.navbar li:last-child {
+    border-right: none;
+}
+*/
+
+.navbar li a {
+  height: 50px;
+  line-height: 30px;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.navbar li a:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.2);
+}
+
+.active {
+  background-color: white;
+  color: black !important;
+  font-weight: bold;
+}
+
+img {
+  height: 50px;
+  transition: 0.5s;
+}
+
+img:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.2);
+}
+
+#logo1 {
+  height: 200px
+}
+
+#login-card{
+    width:350px;
+    border-radius: 25px;
+    margin:100px auto;
+    margin-left: center;
+    align-items: center;
+    text-align: center;
+    }
+
+#email, #password, #name, #age, #birthday, #id, #quantity{
+    border-radius:30px;
+    background-color: #ebf0fc;
+    border-color: #ebf0fc;
+    color: #9da3b0;
+}
+
+#button{
+    border-radius:30px;
+    transition: 0.5s;
+  }
+
+#button:hover{
+  transform: scale(1.2);
+  }
+
+  a {
+      color: white;
+      text-decoration: none;
+      background-color: transparent;
+  }
+
+#btn{
+   position: inherit; 
+   bottom: -35px; 
+   padding: 5px;
+   margin: -20px 50px;
+   align-items: center;
+   border-radius: 5px"
+}
+#container{
+    margin-top:25px;
+}
+
+.btn-circle.btn-sm { 
+            width: 40px; 
+            height: 40px; 
+            padding: 2px 0px; 
+            border-radius: 25px; 
+            font-size: 14px; 
+            text-align: center;
+            margin: 6px;
+            margin-left: 0px;
+            transition: 0.5s;
+          }
+
+.btn-circle.btn-sm:hover { 
+  transform: scale(1.2);
+}
+
+.card1 {
+  margin: 80px auto;
+  width: 320px;
+  height: 500px;
+  background: #272d40;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  float: left;
+  margin-left: 50px;
+}
+
+.card_heart {
+  font-size: 25px;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.card_heart:hover{
+  transform: scale(1.2);
+}
+
+.card_img {
+  margin-top: 25px;
+  width: 100%;
+}
+
+.card_img img {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.card_title,
+.card_price {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.card_size,
+.card_color {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card_size span {
+  padding: 5px 5px;
+  background: #dadada;
+  color: black;
+  border-radius: 5px;
+  margin: 0 2px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+
+.card_color span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 1px 5px;
+  margin-bottom: 10px;
+}
+
+.card_color_yes {
+  background-color: white;
+}
+
+.card_color_no {
+  background-color: black;
+}
+
+.card_color_brown {
+  background-color: brown;
+}
+
+.card_action button {
+  border: 5px;
+  outline: none;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.card_action button:hover {
+  transform: scale(1.2);
+}
+
+.card1:hover .card_img,
+.card1:hover .card_title,
+.card1:hover .card_price {
+  transform: translateY(-150px);
+}
+
+.card_size {
+  margin-top: 150px;
+}
+
+.card_size,
+.card_color,
+.card_action {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+.card1:hover .card_size,
+.card1:hover .card_color,
+.card1:hover .card_action {
+  visibility: visible;
+  opacity: 100;
+}
+
+.card1:hover .card_size {
+  margin-top: -120px;
+}
+

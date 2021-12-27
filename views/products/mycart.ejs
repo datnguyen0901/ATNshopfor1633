@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='/css/index.css'>
+    <link rel='stylesheet' href='/css/mycart.css'>
+
+    <title>My Cart</title>
+</head>
+
+<header>
+    <ul class='navbar'>
+        <li>
+            <img src="/img/logoATN.jpg" />
+        </li>
+
+        <li>
+            <a class="navbar-brand" href="#">ATN SHOP By NTD</a>
+        </li>
+
+        <li>
+            <a href='/'>Home</a>
+        </li>
+
+        <li>
+            <a href='/products'>Product</a>
+        </li>
+
+        <li>
+            <a href='/login'>Account</a>
+        </li>
+
+        <li>
+            <a href='/cart' class='active'>My Cart</a>
+        </li>
+    </ul>
+</header>
+
+<body>
+    <div class="Cart-Container">
+        <div class="Header">
+            <h3 class="Heading">Shopping Cart</h3>
+            <h5 class="Action" onclick="location.href='/cartdelall'">Remove all</h5>
+        </div>
+        <% list.rows.forEach(function(cart) { %>
+        <div class="Cart-Items">
+            <div class="image-box">
+                <img id="img1" src='<%= cart.img %>' />
+            </div>
+            <div class="about">
+                <h1 class="title"><%= cart.name %></h1>
+                <h3 class="subtitle">$<%= cart.price %></h3>
+            </div>
+            <div class="counter">
+                <div class="btn" onclick="document.getElementById('<%= cart.id %>').innerHTML++">+</div>
+                <div class="count" id="<%= cart.id %>" name="quantity" value="<%= cart.quantity %>"><%= cart.quantity %></div>
+                <div class="btn" onclick="document.getElementById('<%= cart.id %>').innerHTML--">-</div>
+            </div>
+            <div class="prices">
+                <div class="amount">$<%= cart.total %></div>
+                <div class="save" onclick="location.href='/editcart/<%= cart.id %>'"><u>Edit cart</u></div>
+                <div class="remove" onclick="location.href='/cartdel1/<%= cart.id %>'"><u>Remove</u></div>
+            </div>
+        </div>
+        <% }) %>
+        <hr> 
+        <div class="checkout">
+        <button class="button">Checkout</button>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+
+<footer>
+    <ul class='navbar'>
+        <img src="/img/logoATN.jpg" />
+        <a class="navbar-brand" href="#">(c) Copyright by NTD TCS20032</a>
+    </ul>
+</footer>
+
+</html>

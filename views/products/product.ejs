@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+    
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='/css/index.css'>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+    <title>Product</title>
+</head>
+
+    <header>
+        <ul class='navbar'>
+            <li>        
+                <img src="/img/logoATN.jpg" />
+            </li>
+            
+            <li>        
+                <a class="navbar-brand" href="#">ATN SHOP By NTD</a>
+            </li>
+    
+            <li>
+                <a href='/'>Home</a>
+            </li>
+    
+            <li>
+                <a href='/products' class='active'>Product</a>
+            </li>
+    
+            <li>
+                <a href='/login'>Account</a>
+            </li>
+
+            <li>
+                <a href='/cart'>My Cart</a>
+            </li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" class="search-input" />
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </header>
+    
+    <body>
+        <% list.rows.forEach(function(products) { %>
+        <div class="card1">
+            <div class="card_heart">
+                <i class='bx bx-bookmark-heart'></i>          
+            </div>
+            <div class="card_img">
+                <img src='<%= products.img %>' alt=''>
+            </div>
+            <div class="card_title">
+                <td><%= products.name %></td>
+            </div>
+            <div class="card_price">
+                <td><%= products.price %></td>$
+            </div>
+            <div class="card_size">
+                <h3>Size:</h3>
+                <span>S</span>
+                <span>M</span>
+                <span>L</span>
+            </div>
+            <div class="card_color">
+                <h3>Light:</h3>
+                <span class="card_color_yes"></span>
+                <span class="card_color_no"></span>
+            </div>
+            <div class="card_action">
+                <button>Buy now</button>
+                <button onclick="location.href='/cart/<%= products.id %>'">Add cart</button>
+            </div>    
+        </div>
+        <% }) %>
+        <script src="app.js"></script>
+    </body>
+    
+    <footer>
+        <ul class='navbar'>
+            <img src="/img/logoATN.jpg" />
+            <a class="navbar-brand" href="#">(c) Copyright by NTD TCS20032</a>
+        </ul>
+    </footer>
+
+</html>

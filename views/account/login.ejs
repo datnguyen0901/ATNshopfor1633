@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+
+
+    <link rel='stylesheet' href='/css/index.css'>
+    <title>Login</title>
+</head>
+
+<header>
+    <ul class='navbar'>
+        <li>        
+            <img src="/img/logoATN.jpg" />
+        </li>
+        
+        <li>        
+            <a class="navbar-brand" href="#">ATN SHOP By NTD</a>
+        </li>
+
+        <li>
+            <a href='/'>Home</a>
+        </li>
+
+        <li>
+            <a href='/products'>Product</a>
+        </li>
+
+        <li>
+            <a href='/login' class='active'>Account</a>
+        </li>
+
+        <li>
+            <a href='/cart'>My Cart</a>
+        </li>
+    </ul>
+</header>
+
+<body>
+    <div id="login-card" class="card">
+        <div class="card-body">
+          <h2 class="text-center">Login form</h2>
+          <br>
+            <form action="auth" method="POST" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+                </div>
+                <button type="submit" id="button" class="btn btn-primary deep-purple btn-block ">Submit</button>
+                <button type="button" onclick="location.href='/registry';"id="button" class="btn btn-primary deep-purple btn-block ">Register</button>
+                <br>
+                <br>
+            
+                <div id="btn" class="text-center">
+            <button type="button" class="btn btn-primary btn-circle btn-sm"><i class="fa fa-facebook"></i></button>
+            <button type="button" class="btn btn-danger btn-circle btn-sm"><i class="fa fa-google"></i></button>
+            <button type="button" class="btn btn-info btn-circle btn-sm"><i class="fa fa-twitter"></i></button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <ul class='navbar'>
+        <img src="/img/logoATN.jpg" />
+        <a class="navbar-brand" href="#">(c) Copyright by NTD TCS20032</a>
+    </ul>
+</footer>
+
+</html>
